@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('./assets/water_clean.jpg');
+            background-size: cover;
+
+
+
+            backdrop-filter: blur(11.6px);
+            -webkit-backdrop-filter: blur(11.6px);
+            position: absolute;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+<div class="logo" style="top: 0;">
+    <a style="position: fixed;" href="/"><img src="./assets/logo1.png" alt=""></a>
+</div>
+
+<%- include('./partials/projcard_save.ejs') %>
+
+<script>
+    //   Scroll Animation
+
+        const boxes = document.querySelectorAll('.box');
+
+        window.addEventListener('scroll',checkBoxes)
+
+
+        function checkBoxes(){
+        const triggerBottom =  window.innerHeight / 5 * 4;
+
+        boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+
+
+                if(boxTop < triggerBottom) {
+                    box.classList.add('show');
+                } else {
+                    box.classList.remove('show');
+                }
+        });
+        }
+</script>
+    
+</body>
+</html>

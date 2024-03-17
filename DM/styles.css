@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+}
+
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+nav img:hover{
+    transform: rotate(90deg) scale(8) translateX(-20px);
+    transition: transform 400ms;
+}

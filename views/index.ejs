@@ -1,0 +1,47 @@
+<html lang="en">
+
+<%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="hero-container">
+        <div class="hero" >   
+            <video autoplay loop muted plays-inline class="back-video">
+                <source src="./assets/no_water.mp4" type="video/mp4">
+            </video>
+            <div class="slogan">
+                <h1 style="mix-blend-mode:luminosity;">No<br>Water</h1>
+            </div>
+        </div>
+        <div class="hero" style="visibility: hidden; opacity: 0;">
+            <video autoplay loop muted plays-inline class="back-video">
+                <source src="./assets/wheet.mp4" type="video/mp4">
+            </video>
+            <div class="slogan">
+                <h1 style="mix-blend-mode:luminosity;">No<br>Plants</h1>
+            </div>
+        </div>
+        <div class="hero" > 
+            <video autoplay loop muted plays-inline class="back-video">
+                <source src="./assets/no_animals.mp4" type="video/mp4">
+            </video>
+            <div class="slogan">
+                <h1 style="mix-blend-mode:luminosity;">No <br> Animals</h1>
+            </div>
+        </div>
+        <div class="hero" style="visibility: hidden; opacity: 0;">
+            <video autoplay loop muted plays-inline class="back-video">
+                <source src="./assets/no_you1.mp4" type="video/mp4">
+            </video>
+            <div class="slogan">
+                <h1 style="mix-blend-mode:luminosity;">No<br>You</h1>
+            </div>
+        </div>
+    </div>
+    <div id="#choose" class="choice" style="text-align: center;">
+        <%- include('./partials/choice1.ejs') %>
+        <h1>Choose <br> Well</h1>
+        <%- include('./partials/choice2.ejs') %>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
